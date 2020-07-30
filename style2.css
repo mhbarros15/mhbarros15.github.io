@@ -3,10 +3,14 @@
     padding: 0;
 }
 
+body {
+    background-color: #23272a;
+}
+
 .header {
     background-color: #1AA3FF;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 100vh;
     background-size: cover;
     background-position: 50% 50%;
 }
@@ -15,10 +19,11 @@
     background-image: url(https://i.imgur.com/E1Idq1s.png);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90vh;
+    height: 100vh;
     filter: invert(1);
     opacity: .5;
     position: relative;
+
 }
 
 .BPG {
@@ -37,11 +42,8 @@
 }
 
 .whitespace {
-    background-color: #23272a;
-    height: 100vh;
     width: 100%;
-    position: absolute;
-    z-index: 999;
+    height: 100vh;
 }
 
 .mouse {
@@ -194,15 +196,15 @@ input:checked ~ label .hamburger:after {
     bottom: 0;
 }
 
-.nav-menu li {
-    display: none;
-}
-
 nav {
     position: fixed;
     z-index: 9999;
     top: 50%;
     left: 50%;
+}
+
+.nav-menu li {
+    display: none;
 }
 
 .nav-menu ul {
@@ -267,15 +269,9 @@ nav {
 .wavesql {
     position: absolute;
     width: 100%;
-    bottom: 7vh;
+    bottom: -1px;
     color: #23272a;
     z-index: 999;
-}
-
-@media (max-width: 576px) {
-    .wavesql {
-        bottom: 5vh;
-    }
 }
 
 .wave {
