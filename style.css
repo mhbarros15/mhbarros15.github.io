@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-image: url('https://i.imgur.com/6Fjeg0a.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.clouds {
+    background-image: url('https://i.imgur.com/RNrPTLq.png');
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    z-index: 998;
+    top: 50%;
+}
+
+.BPG {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+}
+
+.branding img {
+    position: absolute;
+    width: 320px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: invert(1);
+}
+
+.whitespace {
+    background-color: #121212;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+}
+
+.mouse {
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -50%);
+}
+
+.svgmouse {
+    width: 35px;
+    height: 60px;
+    border: 2px solid #fff;
+    border-radius: 60px;
+}
+
+.svgmouse::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    opacity: 1;
+    animation: mouse 1.3s infinite;
+}
+
+@keyframes mouse {
+    from {
+        opacity: 1;
+        top: 10px;
+    }
+
+    to {
+        opacity: 0;
+        top: 40px;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, .9);
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+}
+
+.menu {
+    width: 45px;
+    height: 45px;
+    background-color: #121212;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    z-index: 9999;
+    cursor: pointer;
+    box-shadow: 0 0 0 0px #121212, 0 0 0 0px #121212;
+    transition: box-shadow .25s ease-in-out;
+}
+
+.menu:hover {
+    box-shadow: 0 0 0 8px #121212, 0 0 0 8px #121212;
+    background-color: #121212;
+    transition: box-shadow .5s .1s cubic-bezier(0, 1.07, 0, 1.02);
+}
+
+.hamburger {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    transition: .25s ease-in-out;
+}
+
+.hamburger:before,
+.hamburger:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    transition: .25s ease-in-out;
+}
+
+.hamburger:before {
+    top: -7px;
+}
+
+.hamburger:after {
+    bottom: -7px;
+}
+
+input {
+    display: none;
+    position: absolute;
+}
+
+label {
+    position: absolute;
+}
+
+input:checked ~ label .menu {
+    box-shadow: 0 0 0 140vw #121212, 0 0 0 140vh #121212;
+    background-color: #121212;
+}
+
+input:checked ~ .nav-menu ul {
+    opacity: 1;
+}
+
+input:checked ~ label .hamburger {
+    transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburger:before {
+    transform: rotate(90deg);
+    top: 0;
+}
+
+input:checked ~ label .hamburger:after {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+nav {
+    position: fixed;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+}
+
+.nav-menu ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    list-style: none;
+    transition: .25s .1s cubic-bezier(0, 1.07, 0, 1.02);
+    opacity: 0;
+}
+
+.nav-menu a {
+    text-decoration: none !important;
+    color: #fff;
+    font-family: arial black;
+    text-transform: uppercase;
+    font-size: 60px;
+    line-height: 100px;
+}
+
+.nav-menu a:hover {
+    color: #fff;
+}
+
+.link{
+	position: relative;
+	z-index: 1;
+	display: inline-flex;
+	
+	padding-left: 10px;
+	padding-bottom: 5px;
+	padding-right: 10px;
+}
+
+.link::before{
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to top, #fed330 25%, rgba(0, 0, 0, 0) 0);
+	position: absolute;
+	left: 0;
+	bottom: 15px;
+	z-index: -1;
+	will-change: width;
+	transform-origin: left bottom;
+}
+
+.link:hover::before{
+	width: 0;
+}
+
+.link::before{
+	transition: width .1s ease-out;
+}
+
+.link:hover::before{
+	transition-duration: .15s;
+}
