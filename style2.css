@@ -263,14 +263,15 @@ nav {
 }
 
 .wavesql {
-    display: block;
-}
-
-.wave {
     position: absolute;
+    width: 100%;
     bottom: -1px;
     color: #23272a;
     z-index: 999;
+}
+
+.wave {
+    display: block;
 }
 
 .wavePath {
