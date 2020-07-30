@@ -262,12 +262,15 @@ nav {
 	transition-duration: .15s;
 }
 
+.wavesql {
+    display: block;
+}
+
 .wave {
     position: absolute;
     bottom: -1px;
     color: #23272a;
     z-index: 999;
-    display: block;
 }
 
 .wavePath {
