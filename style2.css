@@ -174,6 +174,10 @@ input:checked ~ .nav-menu ul {
     opacity: 1;
 }
 
+input:checked ~ .nav-menu li {
+    display: block;
+}
+
 input:checked ~ label .hamburger {
     transform: rotate(45deg);
 }
@@ -186,6 +190,10 @@ input:checked ~ label .hamburger:before {
 input:checked ~ label .hamburger:after {
     transform: rotate(90deg);
     bottom: 0;
+}
+
+.nav-menu li {
+    display: none;
 }
 
 nav {
