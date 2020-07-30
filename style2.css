@@ -272,13 +272,7 @@ nav {
     z-index: 999;
 }
 
-@media (min-width: 1200px) {
-    .wavesql {
-        bottom: 7vh;
-    }
-}
-
-@media (min-width: 576px) {
+@media (max-width: 576px) {
     .wavesql {
         bottom: 5vh;
     }
