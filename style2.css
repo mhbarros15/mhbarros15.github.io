@@ -11,6 +11,8 @@ body {
     background-color: #1AA3FF;
     background-repeat: no-repeat;
     height: 100vh;
+    background-size: cover;
+    background-position: 50% 50%;
 }
 
 .lines {
@@ -41,9 +43,30 @@ body {
 
 .whitespace {
     width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: 999;
+    display: block;
+}
+
+.whitespace h3 {
+    color: white;
+    font-size: 30px;
+    font-family: inherit;
+    line-height: 120%;
+    font-weight: 700;
+    text-align: center;
+}
+
+.f-title {
+    margin-top:10vh;
+    margin-bottom: 0px;
+}
+
+.f-subtitle {
+    color: #fff;
+    font-family: inherit;
+    font-weight: 100;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
 }
 
 .mouse {
